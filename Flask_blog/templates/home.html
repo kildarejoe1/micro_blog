@@ -1,16 +1,12 @@
-<html>
-<head>
-  {% if title %}
-   <title> Flask-blog -  {{ title }} </title>
-  {% else %}
-  <title>Flask Webblog </title>
-  {% endif %}
-  </head>
-  <body>
+
+{% extends "layout.html" %}
+
+{% block content %}
+
     {% for post in posts %}
       <h1> {{post.author}} is my name </h1>
       <p> <h3> Title of post {{ post.title }} </h3></p>
       <p> {{ post.date_posted }} </p>
     {% endfor %}
-    </body>
-</html>
+
+{% endblock %}

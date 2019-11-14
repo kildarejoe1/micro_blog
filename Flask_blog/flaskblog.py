@@ -14,8 +14,6 @@ posts = [
      'content': 'alan content Post',
      'date_posted': 'April 14th 2019'
     },
-
-
 ]
 
 
@@ -28,5 +26,11 @@ def hello():
 def about():
     return render_template("about.html", title="about")
 
+@app.route("/test")
+def test():
+    return render_template("test.html", variable="random")
+
+
+    
 if __name__ == '__main__':
     app.run(debug=True)
